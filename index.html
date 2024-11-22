@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A showcase of my projects built using HTML and CSS">
+    <title>Welcome - My Projects</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    
+    <header>
+       
+        <div class="container">
+            <a href="#" class="navbar-logo">
+            <img src="path.jpg" alt="CyberNest Logo" /></a>
+            <h1 style="font-family: cursive; margin-left: 20px;">CyberNest</h1>
+            <li >
+                <span id="theme-icon" class="theme-toggle" title="Toggle Theme" >🌞</span>
+            </li>
+            <div class ="jai" >
+           
+            <div class="dropdown">
+            
+            <button class="dropdown-toggle">&#9776;</button> <!-- Hamburger Menu -->
+            <nav>
+                
+                <ul class="dropdown-menu" >
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+               
+               
+                   
+                
+                </ul>
+            </nav>
+        </div>
+    </div>
+    </header>
+
+    <section class="intro">
+        <div class="container">
+            <h2>Hi, I'm Aditya Chauhan!</h2>
+            <div>
+                <h3>Welcome to My Portfolio!</h3>
+                <p>
+                    I specialize in crafting <strong>stunning, responsive, and user-friendly</strong> web-based projects using 
+                    <span style="color: #e44d26; font-weight: bold;">HTML</span>, 
+                    <span style="color: #264de4; font-weight: bold;">CSS</span>, and 
+                    <span style="color: #f7df1e; font-weight: bold;">JavaScript</span>. 
+                    From eye-catching designs to seamless functionality, my work is designed to <strong>make an impact</strong>.
+                </p>
+                <p><em>Explore my projects and take your digital presence to the next level.</em></p>
+                <a href="contact.html">Get in touch today!</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 id="bb">My Projects</h2>
+            <div class="project">
+                <img src="images2.png" alt="Project 1">
+                <h3 id="bb">Project 1</h3>
+                <p id="bb">Online food ordering website</p>
+                <a href="product.html" class="btn">View Details</a>
+            </div>
+            <div class="project">
+                <img src="images.jpg" alt="Project 2">
+                <h3 id="bb">Project 2</h3>
+                <p id="bb">coming soon</p>
+                <a href="product2.html" class="btn">View Details</a>
+            </div>
+        </div>
+    </section>
+    <section id="donate" class="donate">
+        <div class="container2">
+            <h2>Support My Work</h2>
+            <p>
+                Your contribution helps me continue crafting innovative and user-friendly projects that make a difference. 
+                Every small donation goes a long way in supporting my efforts. 
+                Thank you for your generosity and belief in my work. Donate now to make an impact!
+            </p>
+            <br>    
+            <div class="belan" style="margin-left: 40%;">
+            <style>.pp-8BQ3F6JVZWRCG{text-align:center;border:none;border-radius:1.5rem;min-width:11.625rem;padding:0 2rem;height:3.125rem;font-weight:bold;background-color:#FFD140;color:#000000;font-family:"Helvetica Neue",Arial,sans-serif;font-size:1.125rem;line-height:1.5rem;cursor:pointer;}</style>
+<form action="https://www.paypal.com/ncp/payment/8BQ3F6JVZWRCG" method="post" target="_top" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;">
+  <input class="pp-8BQ3F6JVZWRCG" type="submit" value="DONATE NOW" />
+  <img src=https://www.paypalobjects.com/images/Debit_Credit_APM.svg alt="cards" />
+  <section> Powered by <img src="https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-wordmark-color.svg" alt="paypal" style="height:0.875rem;vertical-align:middle;"/></section>
+</form>
+        </div>
+    </div>
+    </section>
+
+    <footer>
+        <div class="container3">
+            <h2>Contact Me</h2>
+            <p>Email: <a href="mailto:suryachauhan367@gmail.com">suryachauhan367@gmail.com</a></p>
+            <p>Phone: <a href="tel:+91 8369899103">+91 8369899103</a></p>
+            <p>&copy; 2024 Aditya. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const themeToggle = document.getElementById("theme-icon");
+        const body = document.body;
+
+        const savedTheme = localStorage.getItem("theme");
+        if (savedTheme) {
+            body.setAttribute("data-theme", savedTheme);
+            themeToggle.textContent = savedTheme === "dark" ? "🌙" : "🌞";
+        }
+
+        themeToggle.addEventListener("click", () => {
+            const currentTheme = body.getAttribute("data-theme");
+            const newTheme = currentTheme === "dark" ? "light" : "dark";
+            body.setAttribute("data-theme", newTheme);
+            themeToggle.textContent = newTheme === "dark" ? "🌙" : "🌞";
+            localStorage.setItem("theme", newTheme);
+        });
+    </script>
+</body>
+</html>

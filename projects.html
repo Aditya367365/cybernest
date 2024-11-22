@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - My Showcase</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+       
+        <div class="container">
+            <a href="#" class="navbar-logo">
+            <img src="path.jpg" alt="CyberNest Logo" /></a>
+            <h1 style="font-family: cursive; margin-left: 20px;">Projects</h1>
+            <li >
+                <span id="theme-icon" class="theme-toggle" title="Toggle Theme" >🌞</span>
+            </li>
+            <div class ="jai" >
+           
+            <div class="dropdown">
+            
+            <button class="dropdown-toggle">&#9776;</button> <!-- Hamburger Menu -->
+            <nav>
+                
+                <ul class="dropdown-menu" >
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+               
+               
+                   
+                
+                </ul>
+            </nav>
+        </div>
+    </div>
+    </header>
+
+    <section class="projects">
+        <div class="container">
+            <h2>Explore My Projects</h2>
+            <div class="project">
+                <img src="images2.png" alt="Project 1">
+                <h3>Project 1</h3>
+                <p>A brief description of Project 1.</p>
+                <a href="product.html" class="btn">View Details</a>
+            </div>
+            <div class="project">
+                <img src="images.jpg" alt="Project 2">
+                <h3>Project 2</h3>
+                <p>A brief description of Project 2.</p>
+                <a href="product2.html" class="btn">View Details</a>
+            </div>
+        </div>
+    </section>
+    <script>
+        const themeToggle = document.getElementById("theme-icon");
+        const body = document.body;
+
+        const savedTheme = localStorage.getItem("theme");
+        if (savedTheme) {
+            body.setAttribute("data-theme", savedTheme);
+            themeToggle.textContent = savedTheme === "dark" ? "🌙" : "🌞";
+        }
+
+        themeToggle.addEventListener("click", () => {
+            const currentTheme = body.getAttribute("data-theme");
+            const newTheme = currentTheme === "dark" ? "light" : "dark";
+            body.setAttribute("data-theme", newTheme);
+            themeToggle.textContent = newTheme === "dark" ? "🌙" : "🌞";
+            localStorage.setItem("theme", newTheme);
+        });
+    </script>
+    <footer>
+        <div class="container3">
+            <h2>Contact Me</h2>
+            <p id="jai">Email: <a href="mailto:suryachauhan367@gmail.com">suryachauhan367@gmail.com</a></p>
+            <p id="jai">Phone: <a href="tel:+91 8369899103">+91 8369899103</a></p>
+            <p>&copy; 2024 Aditya. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
